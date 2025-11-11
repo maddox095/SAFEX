@@ -1,0 +1,41 @@
+name: esp32_ble_app
+description: A Flutter app to connect ESP32 via BLE, visualize sensor data, and display live location on Google Maps.
+
+# Prevent accidental publishing to pub.dev
+publish_to: 'none'
+
+# Flutter SDK environment
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+# -------------------------------
+# Dependencies
+# -------------------------------
+dependencies:
+  flutter:
+    sdk: flutter  # ✅ Required for widgets & MaterialApp
+
+  provider: ^6.1.2
+  flutter_blue_plus: ^1.31.16
+  google_maps_flutter: ^2.5.0
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.3
+  fl_chart: ^0.68.0
+
+  # ✅ NEW — for accessing phone GPS data
+  geolocator: ^13.0.1
+  geocoding: ^3.0.0  # optional (for reverse geocoding / address lookup)
+
+# -------------------------------
+# Development-only dependencies
+# -------------------------------
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# -------------------------------
+# Flutter configuration
+# -------------------------------
+flutter:
+  uses-material-design: true
